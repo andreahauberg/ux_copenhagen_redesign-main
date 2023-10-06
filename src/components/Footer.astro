@@ -1,26 +1,80 @@
 <footer>
+  <hr />
   <div class="newsletter">
     <h4>Join our newsletter</h4>
-    <div>
-      <input type="email" placeholder="jens-jensen@gmail.com" />
-      <button>Join</button>
+    <form>
+      <div class="input">
+        <input type="email" placeholder="jens-jensen@gmail.com" />
+      </div>
+      <div class="button">
+        <button>Join</button>
+      </div>
+    </form>
+    <div class="social-icons">
+      <a href="#"><img src="../facebook.svg" alt="Facebook" /></a>
+      <a href="#"><img src="../x.svg" alt="X" /></a>
+      <a href="#"><img src="../youtube.svg" alt="YouTube" /></a>
+      <a href="#"><img src="../instagram.svg" alt="Instagram" /></a>
+      <a href="#"><img src="../linkedin.svg" alt="LinkedIn" /></a>
     </div>
   </div>
-  <div class="social-icons">
-    <a href="#"><img src="../facebook.svg" alt="Facebook" /></a>
-    <a href="#"><img src="../x.svg" alt="X" /></a>
-    <a href="#"><img src="../youtube.svg" alt="YouTube" /></a>
-    <a href="#"><img src="../instagram.svg" alt="Instagram" /></a>
-    <a href="#"><img src="../linkedin.svg" alt="LinkedIn" /></a>
-  </div>
-</footer>
 
-<style>
-  footer {
-    display: flex;
-    justify-content: center;
-  }
-  img {
-    width: 10%;
-  }
-</style>
+  <style>
+    footer {
+      display: flex;
+      justify-content: space-between;
+      flex-direction: column;
+      align-items: center;
+    }
+    img {
+      width: 150%;
+    }
+
+    .social-icons {
+      display: flex;
+      flex-direction: row;
+      margin-top: 2em;
+    }
+
+    a {
+      padding: 2em;
+    }
+
+    h4 {
+      text-align: center;
+      color: var(--primary-color);
+      size: var(--h4-size);
+    }
+    button {
+      color: var(--secondary-text);
+      background-color: var(--primary-variant-color);
+      border-radius: 0.5rem;
+      border: none;
+      padding: 0.5rem;
+      font-size: var(--button-size);
+    }
+
+    form {
+      display: flex;
+      justify-content: center;
+    }
+
+    .button {
+      margin-left: 1em;
+      margin-top: 0.14rem;
+    }
+
+    input {
+      padding: 0.5rem;
+      border: none;
+      border-radius: 0.5rem;
+    }
+
+    hr {
+      border-color: var(--primary-color);
+      width: 80%;
+      margin-top: 5em;
+      margin-bottom: 2em;
+    }
+  </style>
+</footer>
