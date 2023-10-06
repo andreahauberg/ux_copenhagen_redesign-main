@@ -9,19 +9,27 @@ import Nav from "./Nav.astro";
     </a>
   </div>
   <Nav />
+  <div class="streg">
+    <hr />
+  </div>
 </header>
 
 <style>
   header {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
   }
   .logo {
-    width: 45%;
+    width: 15rem;
   }
-  @media (min-width: 1000px) {
-    .logo {
-      width: 20%;
-    }
+  hr {
+    border-color: var(--primary-color);
+    width: 80%;
+    margin-bottom: 2em;
+    margin-top: 2em;
+  }
+
+  .streg {
+    grid-column: 1/3;
   }
 </style>

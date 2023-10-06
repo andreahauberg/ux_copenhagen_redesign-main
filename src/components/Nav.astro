@@ -48,6 +48,7 @@
   .hamburger {
     display: none;
     cursor: pointer;
+    margin-top: 2em;
   }
 
   .bar {
@@ -62,7 +63,8 @@
   @media (max-width: 768px) {
     .nav_menu {
       flex-direction: column;
-      background-color: var(--card-color);
+      background-color: var(--hover-color);
+      color: var(--secondary-text);
       position: absolute;
       overflow: hidden;
       left: -200%;
@@ -74,6 +76,10 @@
       height: 100vh;
       text-align: center;
       transition: 0.3s;
+    }
+
+    a {
+      color: var(--secondary-text);
     }
     .hamburger {
       display: block;
