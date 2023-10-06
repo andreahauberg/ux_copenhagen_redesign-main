@@ -1,0 +1,36 @@
+---
+import "../styles/style.css";
+import MainLayout from "../layouts/MainLayout.astro";
+import SpeakerCard from "../components/SpeakerCard.astro";
+const data = await fetch(
+  "https://uxrpssobleoddjtiynvs.supabase.co/rest/v1/speakers",
+  {
+    method: "GET",
+    headers: {
+      apikey:
+        "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InV4cnBzc29ibGVvZGRqdGl5bnZzIiwicm9sZSI6ImFub24iLCJpYXQiOjE2OTU4ODM2NDAsImV4cCI6MjAxMTQ1OTY0MH0.9OZTTto-yaauUUl5WmO_bN-Xa0lZOUwru6s7RDfRNLk",
+    },
+  }
+).then((res) => res.json());
+
+console.log(data);
+---
+
+<MainLayout title="Speakers">
+  <h1>Speakers</h1>
+  <section class="persons">
+    {
+      data.map((speaker) => {
+        return <SpeakerCard data={speaker} />;
+      })
+    }
+  </section>
+</MainLayout>
+
+<style>
+  section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+</style>
