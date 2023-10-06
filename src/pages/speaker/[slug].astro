@@ -32,7 +32,9 @@ console.log(myData);
       <p>{myData.description}</p>
       <br /><br /><br />
       <a href="/speakers">
-        <Button title="Go Back" />
+        <div class="goback">
+          <Button class="goback" title="Go Back" />
+        </div>
       </a>
     </div>
   </article>
@@ -47,11 +49,13 @@ console.log(myData);
     align-items: center;
     grid-template-columns: 1fr 1fr;
     background-color: var(--card-color);
-    margin-bottom: 4em;
+    max-width: 900px;
+    margin-bottom: 0;
     padding: 1rem;
     border-radius: 1rem;
     margin-left: 1rem;
     margin-right: 1rem;
+    margin-top: 3rem;
   }
   img {
     width: 80%;
@@ -63,5 +67,9 @@ console.log(myData);
     img {
       width: 70%;
     }
+  }
+
+  .goback {
+    margin-bottom: 1.1em;
   }
 </style>

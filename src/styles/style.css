@@ -7,15 +7,15 @@
     --primary-text:#121212;
     --secondary-text:#FFFFFF;
     --hover-color:#b53f53;
-    --h1-size:2.19rem;
-    --h2-size:1.3rem;
+    --h1-size:3rem;
+    --h2-size:1.4rem;
     --h3-size:1.25rem;
     --h4-size:1.06rem;
     --p-size:0.93rem;
     --button-size:0.75rem;
     --h1-wheigt:bolder;
     --h2-wheigt:bold;
-    --h3-wheigt:bolder;
+    --h3-wheigt:normal;
     --h4-wheigt:normal;
     --p-wheigt:normal;
     --button-wheigt:normal;
@@ -27,6 +27,7 @@
 
   img{
     width: 70%;
+    border-radius: 0.5rem;
   }
 
   *{
