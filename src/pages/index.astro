@@ -1,6 +1,6 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
-import Button from "../components/Button.astro";
+import HomeButton from "../components/HomeButton.astro";
 ---
 
 <MainLayout title="Home">
@@ -13,7 +13,7 @@ import Button from "../components/Button.astro";
     <div class="home_grid">
       <img class="hero" src="../hero.svg" alt="UX Copenhagen" />
       <div class="buy_tickets">
-        <Button title="Buy Tickets" />
+        <HomeButton title="Buy Tickets" />
       </div>
     </div>
   </div>
@@ -30,12 +30,18 @@ import Button from "../components/Button.astro";
   .buy_tickets {
     order: -1;
     margin-top: 40%;
-    margin-right: 8%;
+    margin-right: 10%;
   }
   @media (min-width: 800px) {
     .buy_tickets {
       margin-top: 15%;
       margin-right: 6%;
+    }
+  }
+  @media (min-width: 1400px) {
+    .buy_tickets {
+      margin-top: 15%;
+      margin-right: 3%;
     }
   }
   .hero {
