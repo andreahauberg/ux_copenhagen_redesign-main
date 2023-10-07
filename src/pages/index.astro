@@ -4,8 +4,10 @@ import Button from "../components/Button.astro";
 ---
 
 <MainLayout title="Home">
-  <h1>UX Conference</h1>
-  <h2>20-21 of March 2024</h2>
+  <div class="home_title">
+    <h1>UX Conference</h1>
+    <h2>20-21 of March 2024</h2>
+  </div>
   <div>
     <h3>See you there?</h3>
     <div class="home_grid">
@@ -22,6 +24,7 @@ import Button from "../components/Button.astro";
     display: flex;
     align-items: center;
     white-space: nowrap;
+    justify-content: center;
   }
 
   .buy_tickets {
@@ -29,8 +32,22 @@ import Button from "../components/Button.astro";
     margin-top: 40%;
     margin-right: 8%;
   }
-  img {
-    max-width: 70%;
+  @media (min-width: 800px) {
+    .buy_tickets {
+      margin-top: 15%;
+      margin-right: 6%;
+    }
+  }
+  .hero {
+    width: 100%;
+    /* max-width: 80%; */
+  }
+
+  @media (min-width: 768px) {
+    .hero {
+      max-width: 50%;
+      margin-top: -10em;
+    }
   }
 
   h2 {
@@ -46,5 +63,18 @@ import Button from "../components/Button.astro";
     font-size: 1.6rem;
     color: var(--primary-color);
     font-weight: bold;
+  }
+
+  @media (min-width: 768px) {
+    h3 {
+      margin-left: 10%;
+      margin-top: 2%;
+    }
+  }
+
+  @media (min-width: 768px) {
+    .home_title {
+      margin-left: 10%;
+    }
   }
 </style>
