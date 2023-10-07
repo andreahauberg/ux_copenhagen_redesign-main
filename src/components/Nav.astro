@@ -27,6 +27,10 @@
     text-decoration: none;
     color: var(--primary-color);
   }
+  a:hover {
+    color: var(--hover-color);
+    transition: 0.7s ease;
+  }
 
   nav {
     min-height: 70px;
@@ -83,10 +87,15 @@
     a {
       color: var(--secondary-text);
     }
+    a:hover {
+      color: var(--primary-color);
+      transition: 0.7s ease;
+    }
 
     li {
       padding: 0.3em;
     }
+
     .hamburger {
       display: block;
       z-index: 3;
